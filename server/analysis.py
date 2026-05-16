@@ -1,6 +1,8 @@
 import geopandas as gpd
+import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
+from sklearn.svm import SVC
 from sklearn.metrics import accuracy_score
 
 # Load the dataset for parcels, the prediction units
@@ -128,6 +130,7 @@ categories = (
     .cat.categories
 )
 
+# Compare actual vs. predicted
 data["predicted_label"] = data["predicted_class"].apply(
     lambda code: categories[code]
 )
@@ -136,22 +139,90 @@ data["correct_prediction"] = (
     data["ASS_CLASSI"] == data["predicted_label"]
 )
 
-print(
-    data[[
-        "ASS_CLASSI",
-        "predicted_label",
-        "correct_prediction"
-    ]].head()
-)
+# print(
+#     data[[
+#         "ASS_CLASSI",
+#         "predicted_label",
+#         "correct_prediction"
+#     ]].head()
+# )
 
+# Remove temporary columns
 data = data.drop(
     columns=["centroid"],
     errors="ignore"
 )
 
-data.to_file(
-    "output/parcel_geoaoi_prediction.geojson",
-    driver="GEOJSON"
+# # Export GeoJSON
+# data.to_file(
+#     "output/parcel_geoaoi_prediction.geojson",
+#     driver="GEOJSON"
+# )
+
+# print("GeoAI output exported.")
+
+# Extra spatial feature 1: road density within 500m
+
+# Spatially join parcels_landuse with roads
+parcels_roads = parcels_landuse.set_geometry(parcels_landuse.buffer(500)).sjoin(
+    roads[["geometry"]],
+    how="right",
+    predicate="intersects",
+    lsuffix="x",
+    rsuffix="y"
 )
 
-print("GeoAI output exported.")
+# Get the length of road segments intersecting with parcel-landuse buffers
+parcels_roads["length"] = parcels_roads.geometry.length
+
+# print(parcels_roads.head())
+# print(parcels_roads.columns)
+
+# Assign total lengths per parcel-landuse buffer to road_density feature
+parcels_landuse["road_density"] = parcels_roads.groupby("index_x").agg({"length": "sum"})
+parcels_landuse["road_density"] = parcels_landuse["road_density"].fillna(0)
+
+# print(parcels_landuse.head())
+
+# Extra spatial feature 2: tourism diversity within 500m
+parcels_landuse["tourism_diversity"] = parcels_landuse.geometry.buffer(1_000).apply(
+    lambda geom: tourism.loc[tourism.intersects(geom), "Kind"].nunique()
+)
+
+# Add new features to list of feature names
+features += ["road_density", "tourism_diversity"]
+
+# Remove missing values in any feature/target column
+data = parcels_landuse.dropna(
+    subset=features + ["target_code"]
+)
+
+# Convert dataset into ML data structure
+X = data[features]
+y = data["target_code"]
+
+# Split training and testing data
+X_train, X_test, y_train, y_test = train_test_split(
+    X,
+    y,
+    test_size=0.30,
+    random_state=42
+)
+
+model_svc = SVC()
+model_svc.fit(X_train, y_train)
+
+model_rf = RandomForestClassifier(
+    n_estimators=100,
+    random_state=42
+)
+model_rf.fit(X_train, y_train)
+
+y_pred_svc = model_svc.predict(X_test)
+y_pred_rf = model_rf.predict(X_test)
+
+accuracy_svm = accuracy_score(y_test, y_pred_svc)
+accuracy_rf = accuracy_score(y_test, y_pred_rf)
+print("Accuracy [RF + original features]:", accuracy)
+print("Accuracy [RF + 2 extra features]:", accuracy_rf)
+print("Accuracy [SVC + 2 extra features]:", accuracy_svm)
