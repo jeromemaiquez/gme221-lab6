@@ -31,3 +31,11 @@ This laboratory exercise performs geospatial machine learning on parcel objects 
 ## Reflections - Part E & F
 
 11. Wrong predictions can be found all throughout the area of interest, but some clustering can be observed in the north and western portions of the AOI. Parcel area might be one factor driving errors, as several small non-residential parcels were misclassified as residential due to their small area. 
+
+## Final Reflections
+
+11. Traditional GIS analysis often makes use of manually defined rules or thresholds. Meanwhile, GeoAI extracts patterns from the data itself using statistical and machine learning methods. This allows GeoAI to uncover hidden trends and patterns in the data at a faster and larger scale.
+12. It is hard to tell without quantitatively measuring feature imoprtance, but as I've observed from the errors, it seems that parcel area is an important feature driving predicted parcel classes.
+13. Many other factors could also be considered as features/predictors, such as building density, other measures of accessibility, etc. Moreover, the splitting of the input data into training and testing sets might not have been minimized for bias. 
+14. Machine learning can quickly provide categorical predictions or numerical estimates of various variables given different driving factors. This is a useful tool for any spatial decision-making involved with forecasting or planning for the future, as well as for generating inventories of resources at a large scale and low cost (e.g., mapping farm plots, houses, etc.).
+15. Many machine learning models work as a black box, where it isn't clear and intuitive how exactly the inputs were transformed into the predicted class or value. In such cases, if the researchers are not careful, biases inherent in the input data may be carried over into the results without the researchers' explicit knowledge, inadvertently tainting decision-making.
