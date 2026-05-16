@@ -22,3 +22,8 @@ This laboratory exercise performs geospatial machine learning on parcel objects 
 5. Machine learning models cannot directly use geometry as input data since machine learning models are numerical in nature, while geometries are complex data types made up of sequences of numbers in specific configurations. Instead, we can extract important quantitative properties of geometries and use those as ML inputs.
 6. Distances are a measure of spatial proximity, which is a proxy for spatial interaction (following Tobler's First law that nearer things are more related). This allows us to account for spatial context in the machine learning model.
 7. I predict that distance to roads will be the most influential factor, since higher access to roads leads to the prevalence of higher-density parcel classes. This is followed by parcel area.
+
+## Reflections - Part D
+8. The accuracy score can be interpreted as a measure of how much geometric properties and spatial context (which together comprise the feature set) determine a parcel's classification.
+9. Yes. Some models reach high accuracy scores because they use correlated feature sets, which give a bonus to accuracy scores while not adding new information into the model. Other "accurate" models are trained and evaluated using datasets that had biased spatial distributions of their training and testing portions.
+10. If there were any properties of buildings available in the data (e.g., density, height, use, etc.), that could also be a powerful predictor of parcel classification. Buildings and parcels are closely related spatial objects.
