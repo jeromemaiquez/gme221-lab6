@@ -27,3 +27,7 @@ This laboratory exercise performs geospatial machine learning on parcel objects 
 8. The accuracy score can be interpreted as a measure of how much geometric properties and spatial context (which together comprise the feature set) determine a parcel's classification.
 9. Yes. Some models reach high accuracy scores because they use correlated feature sets, which give a bonus to accuracy scores while not adding new information into the model. Other "accurate" models are trained and evaluated using datasets that had biased spatial distributions of their training and testing portions.
 10. If there were any properties of buildings available in the data (e.g., density, height, use, etc.), that could also be a powerful predictor of parcel classification. Buildings and parcels are closely related spatial objects.
+
+## Reflections - Part E & F
+
+11. Wrong predictions can be found all throughout the area of interest, but some clustering can be observed in the north and western portions of the AOI. Parcel area might be one factor driving errors, as several small non-residential parcels were misclassified as residential due to their small area. 

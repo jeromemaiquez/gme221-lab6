@@ -116,3 +116,42 @@ y_pred = model.predict(X_test)
 # Evaluate prediction accuracy
 accuracy = accuracy_score(y_test, y_pred)
 print("Accuracy:", accuracy)
+
+# Generate predictions for each parcel
+# ...using the whole feature set (no split)
+data["predicted_class"] = model.predict(X)
+
+# Convert codes back to labels
+categories = (
+    data["ASS_CLASSI"]
+    .astype("category")
+    .cat.categories
+)
+
+data["predicted_label"] = data["predicted_class"].apply(
+    lambda code: categories[code]
+)
+
+data["correct_prediction"] = (
+    data["ASS_CLASSI"] == data["predicted_label"]
+)
+
+print(
+    data[[
+        "ASS_CLASSI",
+        "predicted_label",
+        "correct_prediction"
+    ]].head()
+)
+
+data = data.drop(
+    columns=["centroid"],
+    errors="ignore"
+)
+
+data.to_file(
+    "output/parcel_geoaoi_prediction.geojson",
+    driver="GEOJSON"
+)
+
+print("GeoAI output exported.")
