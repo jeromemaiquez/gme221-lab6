@@ -1,0 +1,26 @@
+{
+"type": "FeatureCollection",
+"name": "schools",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::3123" } },
+"features": [
+{ "type": "Feature", "properties": { "School_Typ": "Private", "Y_Level": "Integrated" }, "geometry": { "type": "Point", "coordinates": [ 508054.422446026117541, 1640500.425921398214996, 0.0 ] } },
+{ "type": "Feature", "properties": { "School_Typ": "Public", "Y_Level": "Primary" }, "geometry": { "type": "Point", "coordinates": [ 508104.367555316071957, 1640229.930484644370154, 0.0 ] } },
+{ "type": "Feature", "properties": { "School_Typ": "Private", "Y_Level": "Primary" }, "geometry": { "type": "Point", "coordinates": [ 507461.947250206780154, 1640111.756630720105022, 0.0 ] } },
+{ "type": "Feature", "properties": { "School_Typ": "Public", "Y_Level": "Secondary" }, "geometry": { "type": "Point", "coordinates": [ 508033.611769960494712, 1639181.682233495172113, 0.0 ] } },
+{ "type": "Feature", "properties": { "School_Typ": "Private", "Y_Level": "Primary" }, "geometry": { "type": "Point", "coordinates": [ 508299.681283814425115, 1639510.64288747520186, 0.0 ] } },
+{ "type": "Feature", "properties": { "School_Typ": "Private", "Y_Level": "Integrated" }, "geometry": { "type": "Point", "coordinates": [ 507985.897159673913848, 1638422.221964940894395, 0.0 ] } },
+{ "type": "Feature", "properties": { "School_Typ": "Private", "Y_Level": "Primary" }, "geometry": { "type": "Point", "coordinates": [ 507929.832863428164274, 1638471.820208223769441, 0.0 ] } },
+{ "type": "Feature", "properties": { "School_Typ": "Private", "Y_Level": "Primary" }, "geometry": { "type": "Point", "coordinates": [ 507638.725279580801725, 1638574.256457704585046, 0.0 ] } },
+{ "type": "Feature", "properties": { "School_Typ": "Private", "Y_Level": "Primary" }, "geometry": { "type": "Point", "coordinates": [ 507323.922548699076287, 1639536.008643700508401, 0.0 ] } },
+{ "type": "Feature", "properties": { "School_Typ": "Public", "Y_Level": "Primary" }, "geometry": { "type": "Point", "coordinates": [ 507608.324997258838266, 1635508.472171592758968, 0.0 ] } },
+{ "type": "Feature", "properties": { "School_Typ": "Private", "Y_Level": "Integrated" }, "geometry": { "type": "Point", "coordinates": [ 507394.548105072113685, 1635423.432914668461308, 0.0 ] } },
+{ "type": "Feature", "properties": { "School_Typ": "Private", "Y_Level": "Integrated" }, "geometry": { "type": "Point", "coordinates": [ 508486.530234059842769, 1635336.223653806839138, 0.0 ] } },
+{ "type": "Feature", "properties": { "School_Typ": "Public", "Y_Level": "Secondary" }, "geometry": { "type": "Point", "coordinates": [ 508335.025627906725276, 1636150.329098318237811, 0.0 ] } },
+{ "type": "Feature", "properties": { "School_Typ": "Private", "Y_Level": "Integrated" }, "geometry": { "type": "Point", "coordinates": [ 507734.024405302479863, 1636474.599830275634304, 0.0 ] } },
+{ "type": "Feature", "properties": { "School_Typ": "Public", "Y_Level": "Primary" }, "geometry": { "type": "Point", "coordinates": [ 509347.106040044687688, 1637996.512367649702355, 0.0 ] } },
+{ "type": "Feature", "properties": { "School_Typ": "Public", "Y_Level": "Primary" }, "geometry": { "type": "Point", "coordinates": [ 511986.045299259247258, 1636837.462622703518718, 0.0 ] } },
+{ "type": "Feature", "properties": { "School_Typ": "Private", "Y_Level": "Primary" }, "geometry": { "type": "Point", "coordinates": [ 507942.45769338280661, 1640658.461948930984363, 0.0 ] } },
+{ "type": "Feature", "properties": { "School_Typ": "Private", "Y_Level": "Primary" }, "geometry": { "type": "Point", "coordinates": [ 507584.01752445101738, 1635361.25315195764415, 0.0 ] } },
+{ "type": "Feature", "properties": { "School_Typ": "Private", "Y_Level": "Primary" }, "geometry": { "type": "Point", "coordinates": [ 507097.029593276034575, 1640167.842471988406032, 0.0 ] } }
+]
+}

@@ -1,0 +1,31 @@
+{
+"type": "FeatureCollection",
+"name": "tourism",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::3123" } },
+"features": [
+{ "type": "Feature", "properties": { "Kind": "Hotel" }, "geometry": { "type": "Point", "coordinates": [ 507848.279441750666592, 1635722.927249828586355, 0.0 ] } },
+{ "type": "Feature", "properties": { "Kind": "Pilgrimage site" }, "geometry": { "type": "Point", "coordinates": [ 507850.280648556887172, 1635626.506317642051727, 0.0 ] } },
+{ "type": "Feature", "properties": { "Kind": "Mall" }, "geometry": { "type": "Point", "coordinates": [ 507996.498208812146913, 1635292.294751344248652, 0.0 ] } },
+{ "type": "Feature", "properties": { "Kind": "Resort" }, "geometry": { "type": "Point", "coordinates": [ 509023.111174098681659, 1640371.419275875901803, 0.0 ] } },
+{ "type": "Feature", "properties": { "Kind": "Resort" }, "geometry": { "type": "Point", "coordinates": [ 508233.355736266530585, 1636061.684171855216846, 0.0 ] } },
+{ "type": "Feature", "properties": { "Kind": "Recreation" }, "geometry": { "type": "Point", "coordinates": [ 508482.954294414434116, 1636390.642271568067372, 0.0 ] } },
+{ "type": "Feature", "properties": { "Kind": "Resort" }, "geometry": { "type": "Point", "coordinates": [ 507357.840793839946855, 1637084.39826395874843, 0.0 ] } },
+{ "type": "Feature", "properties": { "Kind": "Recreation" }, "geometry": { "type": "Point", "coordinates": [ 509544.068164694646839, 1637840.873894037678838, 0.0 ] } },
+{ "type": "Feature", "properties": { "Kind": "Pilgrimage site" }, "geometry": { "type": "Point", "coordinates": [ 511346.800284049415495, 1635977.805777369998395, 0.0 ] } },
+{ "type": "Feature", "properties": { "Kind": "Handicrafts" }, "geometry": { "type": "Point", "coordinates": [ 507608.940033578954171, 1636763.2184374157805, 0.0 ] } },
+{ "type": "Feature", "properties": { "Kind": "Farm tourism site" }, "geometry": { "type": "Point", "coordinates": [ 513500.635001654212829, 1637284.626841983990744, 0.0 ] } },
+{ "type": "Feature", "properties": { "Kind": "Entertainment site" }, "geometry": { "type": "Point", "coordinates": [ 509925.57737539493246, 1636794.01893388829194, 0.0 ] } },
+{ "type": "Feature", "properties": { "Kind": "Farm tourism site" }, "geometry": { "type": "Point", "coordinates": [ 510140.640526934992522, 1639083.655088163679466, 0.0 ] } },
+{ "type": "Feature", "properties": { "Kind": "Farm tourism site" }, "geometry": { "type": "Point", "coordinates": [ 508557.604083019134123, 1639303.686255495529622, 0.0 ] } },
+{ "type": "Feature", "properties": { "Kind": "Event site" }, "geometry": { "type": "Point", "coordinates": [ 507827.861298302363139, 1639763.411278893472627, 0.0 ] } },
+{ "type": "Feature", "properties": { "Kind": "Resort" }, "geometry": { "type": "Point", "coordinates": [ 507341.958682692318689, 1635360.268088879529387, 0.0 ] } },
+{ "type": "Feature", "properties": { "Kind": "Resort" }, "geometry": { "type": "Point", "coordinates": [ 508295.549996778892819, 1636554.966143299592659, 0.0 ] } },
+{ "type": "Feature", "properties": { "Kind": "Resort" }, "geometry": { "type": "Point", "coordinates": [ 509220.388409405073617, 1637974.754626124631613, 0.0 ] } },
+{ "type": "Feature", "properties": { "Kind": "Event site" }, "geometry": { "type": "Point", "coordinates": [ 507441.647340871510096, 1635113.586701554246247, 0.0 ] } },
+{ "type": "Feature", "properties": { "Kind": "Event site" }, "geometry": { "type": "Point", "coordinates": [ 508078.120800862030592, 1639037.364849779056385, 0.0 ] } },
+{ "type": "Feature", "properties": { "Kind": "Event site" }, "geometry": { "type": "Point", "coordinates": [ 507636.28910661500413, 1635156.452054640511051, 0.0 ] } },
+{ "type": "Feature", "properties": { "Kind": "Event site" }, "geometry": { "type": "Point", "coordinates": [ 507517.427861738251522, 1635391.83056693454273, 0.0 ] } },
+{ "type": "Feature", "properties": { "Kind": "Hotel" }, "geometry": { "type": "Point", "coordinates": [ 507573.549978181137703, 1637011.830821820767596, 0.0 ] } },
+{ "type": "Feature", "properties": { "Kind": "Water falls site" }, "geometry": { "type": "Point", "coordinates": [ 509381.249538835603744, 1638573.851820821641013, 0.0 ] } }
+]
+}
