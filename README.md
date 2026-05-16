@@ -17,3 +17,8 @@ This laboratory exercise performs geospatial machine learning on parcel objects 
 2. Since the main purpose of roads in a spatial context is to convey movement and provide access, they have an influence on the proximity and accessibility of spatial objects with each other.
 3. Tourist points of interest are trip generators, pulling in an amount of visitors disproportionate to other POI types. As such, their presence may have an influence on the classification of nearby parcels, i.e., commercial or high-density classes may be more pervalent in the area.
 4. No machine learning has occurred at this stage yet, since all that has been done is to load the necessary datasets into the analysis.
+
+## Reflections - Part C
+5. Machine learning models cannot directly use geometry as input data since machine learning models are numerical in nature, while geometries are complex data types made up of sequences of numbers in specific configurations. Instead, we can extract important quantitative properties of geometries and use those as ML inputs.
+6. Distances are a measure of spatial proximity, which is a proxy for spatial interaction (following Tobler's First law that nearer things are more related). This allows us to account for spatial context in the machine learning model.
+7. I predict that distance to roads will be the most influential factor, since higher access to roads leads to the prevalence of higher-density parcel classes. This is followed by parcel area.
